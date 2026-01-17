@@ -5,6 +5,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2024-01-17
+
+### Security
+
+#### Critical Security Updates
+- Updated `aiohttp` from 3.9.0 to 3.13.3
+  - Fixed HTTP Parser zip bomb vulnerability
+  - Fixed Denial of Service from malformed POST requests
+  - Fixed directory traversal vulnerability
+  
+- Updated `torch` from 2.1.0 to 2.6.0
+  - Fixed heap buffer overflow vulnerability
+  - Fixed use-after-free vulnerability
+  - Fixed remote code execution via torch.load
+  - Fixed deserialization vulnerability
+
+- Updated `lightgbm` from 4.1.0 to 4.6.0
+  - Fixed remote code execution vulnerability
+
+#### High Security Updates
+- Updated `keras` from 2.14.0 to 3.12.0
+  - Fixed directory traversal vulnerabilities
+  - Fixed path traversal in keras.utils.get_file
+  - Fixed deserialization of untrusted data
+  - Fixed arbitrary code execution vulnerability
+
+- Updated `transformers` from 4.35.0 to 4.48.0
+  - Fixed multiple deserialization of untrusted data vulnerabilities
+
+### Changed
+- All dependency versions updated to patched versions
+- No breaking changes to existing functionality
+- Improved overall security posture
+
+### Documentation
+- Added SECURITY.md with vulnerability details and migration guide
+- Updated installation instructions for secure versions
+
 ## [1.0.0] - 2024-01-17
 
 ### Added

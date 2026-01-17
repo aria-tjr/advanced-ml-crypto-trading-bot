@@ -2,8 +2,11 @@
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Security: Updated](https://img.shields.io/badge/security-updated-green.svg)](SECURITY.md)
 
 Professional cryptocurrency futures trading bot with advanced machine learning models for automated trading on Binance, Bybit, and KuCoin.
+
+> **🔒 Security Update (v1.0.1):** All critical vulnerabilities have been patched. See [SECURITY.md](SECURITY.md) for details.
 
 ## 🚀 Features
 
