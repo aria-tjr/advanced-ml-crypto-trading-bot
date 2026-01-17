@@ -1,0 +1,47 @@
+# Trading Bot Configuration
+
+# Exchange settings
+exchange:
+  name: binance
+  testnet: true
+  rate_limit: 1200
+
+# Trading parameters
+trading:
+  symbols:
+    - BTCUSDT
+    - ETHUSDT
+  timeframe: 1h
+  max_positions: 5
+  leverage: 10
+  order_type: LIMIT
+
+# Risk management
+risk:
+  max_position_size: 0.1  # 10% per position
+  stop_loss_pct: 0.02     # 2% stop loss
+  take_profit_pct: 0.04   # 4% take profit
+  max_daily_loss: 0.05    # 5% max daily loss
+  risk_per_trade: 0.01    # 1% risk per trade
+  use_kelly_criterion: true
+
+# ML models
+ml:
+  model_type: ensemble  # xgboost, lstm, transformer, ensemble
+  retrain_interval: 24  # hours
+  lookback_period: 100
+  prediction_horizon: 1
+  feature_count: 200
+
+# Backtesting
+backtest:
+  start_date: "2023-01-01"
+  end_date: "2023-12-31"
+  initial_capital: 10000.0
+  commission: 0.0006      # 0.06%
+  slippage: 0.0001        # 0.01%
+
+# Paths
+data_dir: data
+models_dir: models
+logs_dir: logs
