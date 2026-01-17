@@ -1,5 +1,20 @@
 # Security Update - January 2024
 
+## Latest Update - v1.0.2
+
+### Keras HDF5 Vulnerability (High)
+**Previous version:** 3.12.0  
+**Updated to:** 3.13.1  
+**Vulnerability fixed:**
+- CVE: Resource allocation without limits in HDF5 weight loading component
+- **Impact**: Prevents DoS attacks via malicious HDF5 model files
+- **Severity**: High
+- **Status**: Patched ✅
+
+---
+
+## Previous Updates - v1.0.1
+
 ## Vulnerability Fixes
 
 This update addresses multiple security vulnerabilities in dependencies:
@@ -14,8 +29,9 @@ This update addresses multiple security vulnerabilities in dependencies:
 
 ### 2. keras (High)
 **Previous version:** 2.14.0  
-**Updated to:** 3.12.0  
+**Updated to:** 3.13.1 (latest)  
 **Vulnerabilities fixed:**
+- CVE: Resource allocation without limits in HDF5 weight loading (v3.13.1)
 - CVE: Directory traversal in keras.utils.get_file API
 - CVE: Path traversal attack vulnerability
 - CVE: Deserialization of untrusted data
@@ -46,14 +62,14 @@ This update addresses multiple security vulnerabilities in dependencies:
 
 ### Security Impact
 - **Critical vulnerabilities:** 5 fixed
-- **High severity:** 7 fixed
-- **Total vulnerabilities:** 12+ fixed
+- **High severity:** 8 fixed (includes latest Keras update)
+- **Total vulnerabilities:** 13+ fixed
 
 ### Functionality Impact
 All updated dependencies maintain backward compatibility with the existing codebase:
 
 ✅ **aiohttp 3.13.3** - Fully compatible, no code changes needed  
-✅ **keras 3.12.0** - API compatible, improved security  
+✅ **keras 3.13.1** - API compatible, improved security, HDF5 loading protected  
 ✅ **lightgbm 4.6.0** - Backward compatible  
 ✅ **torch 2.6.0** - Compatible with existing PyTorch code  
 ✅ **transformers 4.48.0** - Backward compatible with minor improvements  
@@ -102,7 +118,7 @@ pip list | grep -E "(aiohttp|keras|lightgbm|torch|transformers)"
 Expected output:
 ```
 aiohttp              3.13.3
-keras                3.12.0
+keras                3.13.1
 lightgbm             4.6.0
 torch                2.6.0
 transformers         4.48.0

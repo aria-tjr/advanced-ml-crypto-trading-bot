@@ -6,7 +6,7 @@
 
 Professional cryptocurrency futures trading bot with advanced machine learning models for automated trading on Binance, Bybit, and KuCoin.
 
-> **🔒 Security Update (v1.0.1):** All critical vulnerabilities have been patched. See [SECURITY.md](SECURITY.md) for details.
+> **🔒 Security Update (v1.0.2):** All critical vulnerabilities patched. Latest update fixes Keras HDF5 resource allocation vulnerability. See [SECURITY.md](SECURITY.md) for details.
 
 ## 🚀 Features
 
