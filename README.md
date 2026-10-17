@@ -1,8 +1,10 @@
 # Advanced ML Crypto Trading Bot
 
-A production-oriented cryptocurrency futures trading bot combining XGBoost, LSTM, and Transformer models for multi-exchange automated trading on Binance, Bybit, and KuCoin.
+> 🚧 **Work in progress — no code is published in this repository yet.** This README describes the planned design. Nothing below should be read as implemented or tested until the source is pushed here.
 
-## Highlights
+A planned cryptocurrency futures trading bot combining XGBoost, LSTM, and Transformer models for multi-exchange automated trading on Binance, Bybit, and KuCoin.
+
+## Planned features
 
 - **Multi-model ensemble** — XGBoost (classification), LSTM (sequence modeling), and Transformer (long-range dependencies) combined into a single signal score
 - **Multi-exchange** via CCXT — Binance, Bybit, KuCoin (spot and perpetual futures)
@@ -15,11 +17,11 @@ A production-oriented cryptocurrency futures trading bot combining XGBoost, LSTM
 - Python 3.10+
 - scikit-learn, XGBoost, TensorFlow/Keras, PyTorch
 - CCXT (exchange API wrapper)
-- Freqtrade framework (strategy runner)
+- Freqtrade framework (planned strategy runner)
 - PostgreSQL (trade logging)
 - Docker + Docker Compose
 
-## Architecture
+## Planned architecture
 
 ```
 data/          OHLCV ingestion + feature engineering
@@ -33,7 +35,7 @@ notify/        Telegram + log handlers
 
 ## Status
 
-Core modules (data pipeline, indicator engine, backtester, risk layer) are complete and tested. The ML ensemble and live-execution layer are being hardened for production use. Backtest reports and sample outputs available on request.
+Work in progress. No source code, tests or backtest results are published in this repository yet; this README is a design outline.
 
 ## Related Work
 
@@ -41,7 +43,7 @@ Built on real deployment experience:
 
 - A live Freqtrade-based trading bot with RSI / MACD / channel-pattern strategies (2023–2024)
 - Telegram signal bots serving active trading communities
-- [NEXUS](https://github.com/aria-tjr/111) — 7-layer PyTorch crypto signal engine
+- [NEXUS](https://github.com/aria-tjr/nexus-ml-signal-engine) — 7-layer PyTorch crypto signal engine
 
 ## Disclaimer
 
@@ -49,4 +51,4 @@ This software is provided for research and educational purposes. Cryptocurrency 
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).
